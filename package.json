@@ -1,0 +1,18 @@
+{
+  "name": "example-google-cloud-function",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Probot & Google Cloud Functions example",
+  "scripts": {
+    "start": "probot run ./app.js"
+  },
+  "author": "Gregor Martynus (https://twitter.com/gr2m)",
+  "license": "ISC",
+  "repository": "https://github.com/probot/example-google-cloud-function",
+  "dependencies": {
+    "probot": "^10.18.0"
+  },
+  "devDependencies": {
+    "smee-client": "^1.2.2"
+  }
+}
