@@ -29,6 +29,7 @@ jobs:
       - name: Deploy to GCF
         run: |
           gcloud functions deploy example-google-cloud-function \
+            --runtime nodejs12 \
             --allow-unauthenticated \
             --trigger-http \
             --set-env-vars APP_ID="${{secrets.APP_ID}}",PRIVATE_KEY="${{secrets.PRIVATE_KEY}}",WEBHOOK_SECRET="${{secrets.WEBHOOK_SECRET}}"
