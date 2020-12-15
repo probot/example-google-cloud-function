@@ -31,6 +31,4 @@ jobs:
           gcloud functions deploy example-google-cloud-function \
             --allow-unauthenticated \
             --trigger-http \
-            --set-env-vars APP_ID="${{secrets.APP_ID}}",\
-                PRIVATE_KEY="${{secrets.PRIVATE_KEY}}",\
-                WEBHOOK_SECRET="${{secrets.WEBHOOK_SECRET}}"
+            --set-env-vars APP_ID="${{secrets.APP_ID}}",PRIVATE_KEY="${{secrets.PRIVATE_KEY}}",WEBHOOK_SECRET="${{secrets.WEBHOOK_SECRET}}"
