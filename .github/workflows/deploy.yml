@@ -1,8 +1,8 @@
 name: Deploy
 on:
   push:
-    #branches:
-    #  - main
+#    branches:
+#      - main
 
 jobs:
   deploy:
@@ -22,4 +22,6 @@ jobs:
             --runtime nodejs12 \
             --allow-unauthenticated \
             --trigger-http \
+            --entry-point probotApp \
+            --source function.js \
             --set-env-vars APP_ID="${{secrets.APP_ID}}",PRIVATE_KEY="${{secrets.PRIVATE_KEY}}",WEBHOOK_SECRET="${{secrets.WEBHOOK_SECRET}}"
