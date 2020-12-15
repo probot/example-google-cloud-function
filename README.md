@@ -4,17 +4,23 @@ This repository is an example of how to deploy the "Hello, World" of probot apps
 
 ## Local setup
 
-1. Create `.env` file with the values for your GitHub App registration and smee URL
+Install dependencies
 
-   ```
-   APP_ID=
-   PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\nMII...oq5zgok=\n-----END RSA PRIVATE KEY-----\n"
-   WEBHOOK_SECRET=
-   WEBHOOK_PROXY_URL=
-   ```
+```
+npm install
+```
 
-2. `npm install`
-3. `npm start`
+Start the server
+
+```
+npm start
+```
+
+Follow the instructions to register a new GitHub app.
+
+## Deployment
+
+The app is continuously deployed to Google Cloud using the [`setup-gcloud` GitHub Action](https://github.com/google-github-actions/setup-gcloud). See [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) for the deployment workflow.
 
 ## License
 
