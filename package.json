@@ -1,5 +1,5 @@
 {
-  "name": "example-google-cloud-function",
+  "name": "@probot/example-google-cloud-function",
   "version": "1.0.0",
   "private": true,
   "description": "Probot & Google Cloud Functions example",
