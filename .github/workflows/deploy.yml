@@ -14,6 +14,7 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@master
         with:
+          # probot/example-google-cloud-function credentials provided by @bcoe
           project_id: ${{ secrets.PROJECT_ID }}
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           export_default_credentials: true
