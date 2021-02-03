@@ -4,8 +4,6 @@ const assert = require("uvu/assert");
 const nock = require("nock");
 nock.disableNetConnect();
 
-// disable Probot logs
-process.env.LOG_LEVEL = "fatal";
 const { Probot, ProbotOctokit } = require("probot");
 
 const app = require("./app");
@@ -15,8 +13,11 @@ let probot;
 const test = suite("app");
 test.before.each(() => {
   probot = new Probot({
-    id: 1,
+    // simple authentication as alternative to appId/privateKey
     githubToken: "test",
+    // disable logs
+    logLevel: "warn",
+    // disable request throttling and retries
     Octokit: ProbotOctokit.defaults({
       throttle: { enabled: false },
       retry: { enabled: false },
