@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": "github:probot/example-google-cloud-function",
   "dependencies": {
-    "probot": "^12.2.5"
+    "probot": "^12.2.7"
   },
   "devDependencies": {
     "nock": "^13.2.9",
